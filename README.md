@@ -270,9 +270,7 @@ To create your own custom theme, please refer [theming wiki](https://github.com/
     <code>s</code><br><code>h</code><br><code>e</code><br><code>l</code><br><code>l</code></td><td><table>
     <tr><td>zsh</td><td>main shell</td></tr>
     <tr><td>eza</td><td>colorful file lister</td></tr>
-    <tr><td>oh-my-zsh-git</td><td>for zsh plugins</td></tr>
-    <tr><td>zsh-theme-powerlevel10k-git</td><td>theme for zsh</td></tr>
-    <tr><td>pokemon-colorscripts-git</td><td>display pokemon sprites</td></tr></table>
+    <tr><td>starship</td><td>All the zsh configurations</td></tr>
 </td></tr></table>
 
 

@@ -84,6 +84,6 @@ if nvidia_detect && [ $(grep '^source = ~/.config/hypr/nvidia.conf' ${HOME}/.con
 fi
 
 ./create_cache.sh
-./restore_zsh.sh
+# ./restore_zsh.sh
 ./restore_lnk.sh
 

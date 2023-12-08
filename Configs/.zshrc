@@ -1,13 +1,3 @@
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
-
-# Path to powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# List of plugins used
-plugins=()
-source $ZSH/oh-my-zsh.sh
-
 # In case a command is not found, try to find the package that has it
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
@@ -27,7 +17,6 @@ function command_not_found_handler {
     fi
     return 127
 }
-
 # Detect the AUR wrapper
 if pacman -Qi yay &>/dev/null ; then
    aurhelper="yay"
@@ -57,8 +46,15 @@ alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias vc='code' # gui code editor
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# completions
+[ -s "$BUN_INSTALL/_bun" ] || source "$BUN_INSTALL/_bun"
 
-#Display Pokemon
-pokemon-colorscripts --no-title -r 1,3,6
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH" 
+# completions
+[ -s "$VOLTA_HOME/_volta" ] ||  source "$VOLTA_HOME/_volta"
+eval "$(starship init zsh)"
