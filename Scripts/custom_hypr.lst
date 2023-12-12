@@ -53,4 +53,8 @@ vim
 ark
 zsh
 eza
+oh-my-zsh-git
+zsh-autosuggestions-git
+zsh-syntax-highlighting-git
+zsh-completions-git
 starship
